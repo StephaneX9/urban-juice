@@ -34,7 +34,7 @@ body {
   font-size: 16px;
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 img { display: block; max-width: 100%; }
@@ -194,15 +194,20 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .scrub-scene {
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
   opacity: 0;
   transform: scale(1.04);
   transition: opacity .6s ease, transform 1.2s ease;
   will-change: opacity, transform;
 }
 .scrub-scene.is-active { opacity: 1; transform: scale(1); }
+.scene-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.scene-blur { display: none; }
 .scrub-shade {
   position: absolute;
   inset: 0;
@@ -242,12 +247,13 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .scrub-chapters button.is-active { opacity: 1; color: var(--orange); }
 
 .scrub-chapter {
+  --travel: 0px;
   position: absolute;
   z-index: 2;
   top: 50%;
   left: 6vw;
   width: min(560px, 88vw);
-  transform: translateY(-50%);
+  transform: translateY(calc(-50% + var(--travel)));
   opacity: 0;
   pointer-events: none;
   will-change: transform, opacity;
@@ -725,9 +731,46 @@ button, input, select, textarea { font: inherit; color: inherit; }
   .uj-nav { display: none; }
   .uj-head { padding: 12px 16px; }
   .scroll-scrub { height: 420vh; min-height: 2200px; }
-  .scrub-chapter { left: 16px; right: 16px; width: auto; }
-  .chapter-2 { left: 16px; right: 16px; }
-  .scrub-chapter .uj-lead { font-size: 17px; }
+
+  /* Hero mobile : la scène 16:9 est affichée en entier (fruits compris) dans le
+     tiers haut de l'écran, sur un fond flouté de la même image ; les textes
+     occupent le bas de l'écran. */
+  .scene-blur {
+    display: block;
+    position: absolute;
+    inset: -12%;
+    width: 124%;
+    height: 124%;
+    object-fit: cover;
+    filter: blur(26px) brightness(.5) saturate(1.1);
+  }
+  .scene-img {
+    inset: auto;
+    left: 50%;
+    top: 31vh;
+    top: 31dvh;
+    width: 124vw;
+    height: calc(124vw * 9 / 16);
+    transform: translate(-50%, -50%);
+  }
+  .scrub-shade {
+    background:
+      linear-gradient(to bottom, rgba(7, 13, 38, 0.6), rgba(7, 13, 38, 0) 18%, rgba(7, 13, 38, 0) 46%, rgba(7, 13, 38, 0.82) 70%, rgba(7, 13, 38, 0.96) 100%);
+  }
+  .scrub-chapter, .chapter-2, .chapter-3 {
+    top: auto;
+    bottom: 5vh;
+    bottom: 5dvh;
+    left: 20px;
+    right: 20px;
+    width: auto;
+    transform: translateY(var(--travel));
+  }
+  .scrub-chapter .uj-kicker { margin-bottom: 16px; }
+  .scrub-chapter h1, .scrub-chapter h2 { font-size: clamp(36px, 10.5vw, 44px); }
+  .scrub-chapter .uj-lead { margin-top: 18px; font-size: 16px; }
+  .scrub-chapter .uj-actions { margin-top: 24px; }
+  .uj-chips { margin-top: 18px; }
   .uj-gamme, .uj-gamme.is-flipped { grid-template-columns: 1fr; gap: 28px; padding: 40px 0; }
   .uj-gamme.is-flipped .uj-gamme-img { order: 0; }
   .uj-gamme.is-flipped > div:last-child { order: 0; }

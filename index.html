@@ -31,9 +31,18 @@
   <section class="scroll-scrub" id="accueil" aria-label="Présentation">
     <div class="scrub-sticky">
       <div class="scrub-media" aria-hidden="true">
-        <img class="scrub-scene is-active" src="assets/world/scene-01-poster.jpg" alt="" data-scene="0" fetchpriority="high">
-        <img class="scrub-scene" src="assets/world/scene-02-poster.jpg" alt="" data-scene="1">
-        <img class="scrub-scene" src="assets/world/scene-03-poster.jpg" alt="" data-scene="2">
+        <div class="scrub-scene is-active" data-scene="0">
+          <img class="scene-blur" src="assets/world/scene-01-poster.jpg" alt="">
+          <img class="scene-img" src="assets/world/scene-01-poster.jpg" alt="" fetchpriority="high">
+        </div>
+        <div class="scrub-scene" data-scene="1">
+          <img class="scene-blur" src="assets/world/scene-02-poster.jpg" alt="">
+          <img class="scene-img" src="assets/world/scene-02-poster.jpg" alt="">
+        </div>
+        <div class="scrub-scene" data-scene="2">
+          <img class="scene-blur" src="assets/world/scene-03-poster.jpg" alt="">
+          <img class="scene-img" src="assets/world/scene-03-poster.jpg" alt="">
+        </div>
         <div class="scrub-shade"></div>
       </div>
 

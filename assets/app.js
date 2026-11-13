@@ -35,6 +35,7 @@
   var chapterBtns = Array.prototype.slice.call(document.querySelectorAll(".scrub-chapters button"));
   var count = chapters.length;
   var activeIndex = -1;
+  var mobileQuery = window.matchMedia("(max-width: 860px)");
 
   function clamp(v, a, b) { return Math.max(a, Math.min(b, v)); }
 
@@ -51,9 +52,10 @@
       var t = pos - (i + 0.5);                   // 0 quand le chapitre est centré
       if (i === 0) t = Math.max(t, 0);           // le premier chapitre est en place dès l'arrivée
       if (i === count - 1) t = Math.min(t, 0);   // le dernier reste en place jusqu'à la fin
-      var travel = reduceMotion ? 0 : -t * vh * 0.9;
+      var factor = mobileQuery.matches ? 0.45 : 0.9;   // course plus courte sur mobile
+      var travel = reduceMotion ? 0 : -t * vh * factor;
       var fade = 1 - clamp((Math.abs(t) - 0.5) / 0.25, 0, 1);
-      ch.style.transform = "translateY(calc(-50% + " + travel.toFixed(1) + "px))";
+      ch.style.setProperty("--travel", travel.toFixed(1) + "px");
       ch.style.opacity = fade.toFixed(3);
       ch.classList.toggle("is-active", i === index);
     });
