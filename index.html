@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Urban Juice</title>
+  <meta name="description" content="Urban Juice, kiosque de jus frais à Libreville. Des boissons fraîches 100 % sans alcool, faites à la minute avec les fruits du Gabon. Dès 1 500 FCFA.">
+  <meta name="theme-color" content="#070D26">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<header class="uj-head">
+  <a class="uj-logo" href="#accueil" aria-label="Urban Juice, accueil"><i aria-hidden="true"></i><span>Urban <b>Juice</b></span></a>
+  <nav class="uj-nav" aria-label="Navigation principale">
+    <a href="#carte">La carte</a>
+    <a href="#marque">La marque</a>
+    <a href="#points-de-vente">Points de vente</a>
+    <a href="#entreprises">Entreprises</a>
+  </nav>
+  <a class="uj-btn-ghost uj-head-cta" href="#entreprises">Demander un devis</a>
+</header>
+
+<main>
+
+  <!-- ===== HERO : chapitres défilants ===== -->
+  <section class="scroll-scrub" id="accueil" aria-label="Présentation">
+    <div class="scrub-sticky">
+      <div class="scrub-media" aria-hidden="true">
+        <img class="scrub-scene is-active" src="assets/world/scene-01-poster.jpg" alt="" data-scene="0" fetchpriority="high">
+        <img class="scrub-scene" src="assets/world/scene-02-poster.jpg" alt="" data-scene="1">
+        <img class="scrub-scene" src="assets/world/scene-03-poster.jpg" alt="" data-scene="2">
+        <div class="scrub-shade"></div>
+      </div>
+
+      <nav class="scrub-chapters" aria-label="Scroll chapters">
+        <button type="button" data-chapter="0" class="is-active"><span>Accueil</span></button>
+        <button type="button" data-chapter="1"><span>Terroir</span></button>
+        <button type="button" data-chapter="2"><span>Minute</span></button>
+      </nav>
+
+      <article class="scrub-chapter chapter-1 is-active" data-chapter="0">
+        <p class="uj-kicker">Kiosque de jus frais · Libreville</p>
+        <h1>L'énergie pure,<br>le style en plus.</h1>
+        <p class="uj-lead">Des boissons fraîches 100 % sans alcool, faites à la minute avec les fruits du Gabon. Dès 1 500 FCFA.</p>
+        <div class="uj-actions">
+          <a class="uj-btn" href="#points-de-vente">Trouver le kiosque <i aria-hidden="true">→</i></a>
+          <a class="uj-btn-ghost" href="#entreprises">Demander un devis</a>
+        </div>
+      </article>
+
+      <article class="scrub-chapter chapter-2" data-chapter="1">
+        <h2>La mangue de Libreville vaut tous les concentrés.</h2>
+        <p class="uj-lead">Mangue, ananas, corossol, tamarin, fruit de la passion, gingembre. Achetés au marché la veille, jamais plus tôt.</p>
+        <ul class="uj-chips">
+          <li>Fruits du Gabon</li>
+          <li>100 % sans alcool</li>
+        </ul>
+      </article>
+
+      <article class="scrub-chapter chapter-3" data-chapter="2">
+        <h2>Prêt en moins de deux minutes.</h2>
+        <p class="uj-lead">Chaque boisson est préparée devant vous, du pressage au dégradé. Rien n'est fait à l'avance.</p>
+        <ul class="uj-chips">
+          <li>Préparé à la minute</li>
+          <li>Mobile money ou espèces</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== LA CARTE ===== -->
+  <section class="uj-sec uj-carte" id="carte" aria-labelledby="carte-title">
+    <div class="uj-wrap">
+      <p class="uj-kicker">La carte</p>
+      <h2 class="uj-title" id="carte-title">Trois gammes, neuf recettes.</h2>
+      <p class="uj-intro">Une carte courte, maîtrisée à la perfection. Chaque recette porte le nom d'un lieu ou d'un symbole du Gabon : c'est une carte du pays qui se boit.</p>
+
+      <article class="uj-gamme gamme-styles">
+        <div class="uj-gamme-img">
+          <img src="assets/img/jus.jpg" alt="Trois jus de fruits frais en gobelets, orange mangue, ananas menthe et pastèque" loading="lazy">
+          <div class="uj-price">1 500 F</div>
+        </div>
+        <div>
+          <h3>Jus <span>Stylés</span></h3>
+          <p>La porte d'entrée de la carte. Des fruits frais pressés, de la couleur, et rien d'autre.</p>
+          <div class="uj-reco"><span>01</span><h4>Okoumé Sunrise</h4><p>Orange pressée, mangue, fruit de la passion<span>Le best-seller du matin : vitamines, couleur, réveil.</span></p></div>
+          <div class="uj-reco"><span>02</span><h4>Ogooué Flow</h4><p>Ananas frais, menthe pilée, citron vert, eau de coco<span>Hydratation et fraîcheur, le fleuve dans un gobelet.</span></p></div>
+          <div class="uj-reco"><span>03</span><h4>Baie des Rois</h4><p>Pastèque, fruits rouges de saison, citron vert, basilic<span>Léger et désaltérant, pour l'après-midi en terrasse.</span></p></div>
+        </div>
+      </article>
+
+      <article class="uj-gamme gamme-blends is-flipped">
+        <div class="uj-gamme-img">
+          <img src="assets/img/blends.jpg" alt="Trois energy blends en gobelets, gingembre citron, vert concombre pomme et tamarin banane" loading="lazy">
+          <div class="uj-price">2 000 F</div>
+        </div>
+        <div>
+          <h3>Energy <span>Blends</span></h3>
+          <p>Les boosters naturels du terroir. Aucun sucre ajouté : la douceur vient des fruits et du miel.</p>
+          <div class="uj-reco"><span>01</span><h4>Éclair d'Akanda</h4><p>Gingembre frais pressé, citron, miel pur, pointe de piment doux<span>Le boost signature : énergie immédiate.</span></p></div>
+          <div class="uj-reco"><span>02</span><h4>Green Power</h4><p>Concombre, pomme verte, épinard, gingembre, touche de spiruline<span>Récupération et vitalité, le chouchou des sportifs.</span></p></div>
+          <div class="uj-reco"><span>03</span><h4>Tamarin Charge</h4><p>Tamarin, banane, flocons d'avoine, miel, cannelle<span>Énergie longue durée, avant l'examen ou avant le match.</span></p></div>
+        </div>
+      </article>
+
+      <article class="uj-gamme gamme-signatures">
+        <div class="uj-gamme-img">
+          <img src="assets/img/signatures.jpg" alt="Trois boissons signatures en dégradés, coucher de soleil, bissap menthe et coco ananas" loading="lazy">
+          <div class="uj-price">2 500 F</div>
+        </div>
+        <div>
+          <h3>Les <span>Signatures</span></h3>
+          <p>Des créations en couches et en dégradés, pensées pour l'appareil photo autant que pour le palais.</p>
+          <div class="uj-reco"><span>01</span><h4>Pointe-Denis Sunset</h4><p>Dégradé mangue, fruit de la passion et bissap, glace pilée, ananas rôti<span>Le coucher de soleil sur la plage la plus célèbre du pays.</span></p></div>
+          <div class="uj-reco"><span>02</span><h4>Libreville by Night</h4><p>Bissap infusé à la menthe, citron vert, gingembre, perles de chia<span>Pourpre nuit constellé, l'énergie de la capitale après 19 heures.</span></p></div>
+          <div class="uj-reco"><span>03</span><h4>L'Équateur</h4><p>Lait de coco, ananas pressé, corossol, zeste d'agrume, en couches<span>Blanc sur or : la ligne qui coupe le pays en deux, dans un gobelet.</span></p></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== LA MARQUE / MANIFESTE ===== -->
+  <section class="uj-sec uj-marque" id="marque" aria-label="Le manifeste">
+    <div class="uj-marque-bg" aria-hidden="true">
+      <img src="assets/img/fruits.jpg" alt="" loading="lazy">
+    </div>
+    <div class="uj-marque-in uj-wrap">
+      <p class="uj-kicker">Le manifeste</p>
+      <p class="uj-manifeste">Nous croyons que l'énergie n'a pas besoin d'alcool. Que le style n'a pas besoin d'importation. <span>Nous sommes de Libreville, pour Libreville.</span></p>
+      <div class="uj-values">
+        <div><p class="uj-value-t">Fraîcheur radicale</p><p>Aucun jus préparé à l'avance. Ce qui n'est pas frais n'est pas servi.</p></div>
+        <div><p class="uj-value-t">Fierté du terroir</p><p>Chaque recette porte le nom d'un lieu du Gabon. La carte raconte le pays.</p></div>
+        <div><p class="uj-value-t">Vitesse respectueuse</p><p>Servi en moins de deux minutes, jamais au détriment du geste propre.</p></div>
+        <div><p class="uj-value-t">Transparence totale</p><p>Prix affichés, recettes visibles, préparation devant vous.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== POINTS DE VENTE ===== -->
+  <section class="uj-sec uj-pdv" id="points-de-vente" aria-labelledby="pdv-title">
+    <div class="uj-wrap">
+      <h2 class="uj-title" id="pdv-title">Où nous trouver à Libreville.</h2>
+      <p class="uj-intro">Au plus près des bureaux, des campus et des salles de sport. Passez, commandez, repartez avec votre énergie en moins de deux minutes.</p>
+
+      <div class="uj-pdv-grid">
+        <div class="uj-pdv-media">
+          <img src="assets/img/kiosque.jpg" alt="Le kiosque Urban Juice à la tombée du jour, un vendeur prépare un jus devant deux clients" loading="lazy">
+          <div class="uj-hours"><strong>8h15 à 19h</strong><span>Du lundi au samedi, service continu</span></div>
+        </div>
+        <div class="uj-pdv-list">
+          <article class="uj-pdv-card">
+            <div class="uj-pdv-pin"><span>1</span></div>
+            <h3>Kiosque Centre-ville</h3>
+            <p class="uj-pdv-addr">Boulevard Triomphal, côté immeubles de bureaux</p>
+            <p class="uj-pdv-desc">Le kiosque principal, au cœur du quartier d'affaires.</p>
+            <div class="uj-tags"><span class="uj-tag is-open">Ouvert</span><span class="uj-tag">Emplacement fictif</span></div>
+          </article>
+          <article class="uj-pdv-card">
+            <div class="uj-pdv-pin"><span>2</span></div>
+            <h3>Kiosque Louis</h3>
+            <p class="uj-pdv-addr">Quartier Louis, près du carrefour</p>
+            <p class="uj-pdv-desc">Le rendez-vous de fin de journée et du samedi.</p>
+            <div class="uj-tags"><span class="uj-tag is-soon">Ouverture prochaine</span><span class="uj-tag">Emplacement fictif</span></div>
+          </article>
+          <article class="uj-pdv-card">
+            <div class="uj-pdv-pin"><span>3</span></div>
+            <h3>Kiosque Akanda</h3>
+            <p class="uj-pdv-addr">Angondjé, à côté des terrains de sport</p>
+            <p class="uj-pdv-desc">Le point Energy Blends après l'entraînement.</p>
+            <div class="uj-tags"><span class="uj-tag is-soon">Ouverture prochaine</span><span class="uj-tag">Emplacement fictif</span></div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ENTREPRISES ===== -->
+  <section class="uj-sec uj-b2b" id="entreprises" aria-labelledby="b2b-title">
+    <div class="uj-wrap">
+      <p class="uj-kicker">Entreprises et événements</p>
+      <h2 class="uj-title" id="b2b-title">Urban Juice se déplace chez vous.</h2>
+      <p class="uj-intro">Séminaires, salons, mariages, hôtels, salles de sport : nous apportons les fruits, la glace et le geste. Vous recevez un devis clair sous 24 heures.</p>
+
+      <div class="uj-b2b-media">
+        <img src="assets/img/entreprises.jpg" alt="Un bar à jus Urban Juice lors d'un événement d'entreprise à Libreville" loading="lazy">
+      </div>
+
+      <div class="uj-b2b-grid">
+        <div class="uj-offers">
+          <div class="uj-offer"><span>01</span><h3>Plateaux entreprises et séminaires</h3><p>Assortiments de 10 à 50 boissons livrés en glacières, gobelets personnalisables au nom de l'événement. <span>Sur devis.</span></p></div>
+          <div class="uj-offer"><span>02</span><h3>Bar à jus événementiel</h3><p>Un stand avec préparation en direct pour vos salons, mariages, compétitions sportives et marchés nocturnes. <span>Forfait demi-journée ou journée.</span></p></div>
+          <div class="uj-offer"><span>03</span><h3>Partenariats hôtels</h3><p>Approvisionnement quotidien des petits-déjeuners et des bars de piscine. Co-branding possible. <span>Grille dégressive selon volume.</span></p></div>
+          <div class="uj-offer"><span>04</span><h3>Salles de sport</h3><p>Le Green Power en post-entraînement, avec une présence hebdomadaire dans votre salle. <span>Partenariat de visibilité.</span></p></div>
+        </div>
+
+        <form class="uj-form" id="devis-form" novalidate>
+          <h3>Demander un devis</h3>
+          <p>Réponse sous 24 heures. Votre demande part directement sur notre WhatsApp.</p>
+          <div class="uj-form-row">
+            <label>Votre nom<input type="text" name="nom" autocomplete="name" required></label>
+            <label>Entreprise<input type="text" name="entreprise" autocomplete="organization"></label>
+          </div>
+          <label>Prestation
+            <select name="prestation">
+              <option>Plateaux entreprises</option>
+              <option>Bar à jus événementiel</option>
+              <option>Partenariat hôtel</option>
+              <option>Partenariat salle de sport</option>
+            </select>
+          </label>
+          <div class="uj-form-row">
+            <label>Nombre de boissons<input type="number" name="quantite" min="1" placeholder="Ex. 30"></label>
+            <label>Date souhaitée<input type="date" name="date"></label>
+          </div>
+          <label>Précisions<textarea name="details" rows="3" placeholder="Lieu, horaires, gobelets personnalisés..."></textarea></label>
+          <button type="submit">Envoyer sur WhatsApp</button>
+          <p class="uj-form-msg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FIDÉLITÉ ===== -->
+  <section class="uj-sec uj-fid" aria-labelledby="fid-title">
+    <div class="uj-wrap">
+      <div class="uj-fid-box">
+        <div class="uj-dots" aria-hidden="true">
+          <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="is-empty"></i><i class="is-empty"></i><i class="is-empty"></i>
+        </div>
+        <div>
+          <h2 id="fid-title">10 boissons achetées, 1 Jus Stylé offert.</h2>
+          <p>La carte de fidélité Urban Juice est numérique et se gère sur WhatsApp. Demandez la vôtre au kiosque dès votre première commande.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="uj-foot" id="contact">
+  <div class="uj-wrap">
+    <p class="uj-foot-big">L'énergie pure, <span>le style en plus.</span></p>
+    <div class="uj-foot-grid">
+      <div>
+        <h4>Contact</h4>
+        <a href="https://wa.me/24177000000" target="_blank" rel="noopener">WhatsApp : +241 77 00 00 00</a>
+        <p>contact@urbanjuice.ga</p>
+      </div>
+      <div>
+        <h4>Réseaux</h4>
+        <p>Instagram : @UrbanJuiceGabon</p>
+        <p>TikTok : @UrbanJuiceGabon</p>
+        <p>Facebook : Urban Juice Gabon</p>
+      </div>
+      <div>
+        <h4>Kiosque</h4>
+        <p>Libreville, Gabon</p>
+        <p>Du lundi au samedi, 8h15 à 19h</p>
+        <p>Paiement mobile money ou espèces</p>
+      </div>
+    </div>
+    <p class="uj-foot-note">Maquette de présentation. Adresses, numéro de téléphone et e-mail sont fictifs et seront remplacés par les informations réelles.</p>
+  </div>
+</footer>
+
+<script src="assets/app.js" defer></script>
+</body>
+</html>
